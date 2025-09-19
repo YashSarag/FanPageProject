@@ -17,7 +17,7 @@ const path = require('path');
 // app.use(express.static(path.join(__dirname, "../Frontend/build")));
 
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "../Frontend", "index.html"));
+  res.sendFile(path.join(__dirname, "../Frontend/public", "index.html"));
 });
 
 
