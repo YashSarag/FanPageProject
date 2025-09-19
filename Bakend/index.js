@@ -6,10 +6,7 @@ app.use(express.json());
 const cors = require('cors');
 
 app.use(cors({
-  origin: [
-    "http://localhost:3000",                      // for local dev
-    "https://silver-heliotrope-64fa76.netlify.app" // ✅ your Netlify frontend
-  ],
+  origin: "http://localhost:3000",   // or "*" to allow all origins
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
@@ -17,13 +14,13 @@ app.use(cors({
 
 
 const path = require('path');
-// app.use(express.static(path.join(__dirname, "../Frontend/build")));
+// serve static files first
+app.use(express.static(path.join(__dirname, "../Frontend")));
 
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "../Frontend/public", "index.html"));
+// catch-all (must be last)
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "../Frontend", "index.html"));
 });
-
-
 
 
 
