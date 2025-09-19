@@ -28,7 +28,7 @@ function Fanwall(){
 
     async function postData({name,message,color,city,date}){
         try{
-            const response = await fetch("http://localhost:8000/api/v1/createFanwallCard", { 
+            const response = await fetch("https://fanpageproject-11.onrender.com/api/v1/createFanwallCard", { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -64,7 +64,7 @@ function Fanwall(){
     async function fetchData(){
         setLoading(true);
         try{
-            const res = await fetch("http://localhost:8000/api/v1/getFanwallCards");
+            const res = await fetch("https://fanpageproject-11.onrender.com/api/v1/getFanwallCards");
             const data = await res.json();
             if(data.success === true){
                 setCards(pre=>([card1,...data.data]));
