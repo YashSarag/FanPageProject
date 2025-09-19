@@ -14,11 +14,11 @@ app.use(cors({
 
 const path = require('path');
 // serve static files first
-app.use(express.static(path.join(__dirname, "../Frontend")));
+app.use(express.static(path.join(__dirname, "../Frontend/public")));
 
 // catch-all (must be last)
 app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "../Frontend", "index.html"));
+  res.sendFile(path.join(__dirname, "../Frontend/public", "index.html"));
 });
 
 
