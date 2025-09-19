@@ -14,10 +14,10 @@ app.use(cors({
 
 
 const path = require('path');
-app.use(express.static(path.join(__dirname, "../Frontend/build")));
+// app.use(express.static(path.join(__dirname, "../Frontend/build")));
 
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "../Frontend/build", "index.html"));
+  res.sendFile(path.join(__dirname, "../Frontend", "index.html"));
 });
 
 
