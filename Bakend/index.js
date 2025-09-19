@@ -6,7 +6,10 @@ app.use(express.json());
 const cors = require('cors');
 
 app.use(cors({
-  origin: "http://localhost:3000",   // or "*" to allow all origins
+  origin: [
+    "http://localhost:3000",                      // for local dev
+    "https://silver-heliotrope-64fa76.netlify.app" // ✅ your Netlify frontend
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
