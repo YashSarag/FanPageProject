@@ -3,6 +3,56 @@ import { useState } from "react";
 export const CounterContext = createContext();
 
 function CounterContextProvider({children}){
+    let questions = [
+        {
+            question: "Where was Akshaan born?",
+            options: {
+                op1: "Delhi",
+                op2: "Mumbai",
+                op3: "Kolkata",
+                op4: "Chennai",
+            },
+            ans: "b",
+        },
+
+        {
+            question: "Waht role Akshhan plays in TMKOC?",
+            options: {
+                op1: "Veer Tanwar",
+                op2: "Samay Binjola",
+                op3: "Veer Binjola",
+                op4: "Samay Tanwar",
+            },
+            ans: "c",
+        },
+
+        {
+            question: "Waht role Akshhan played Baalshiv?",
+            options: {
+                op1: "Baal-Shiv",
+                op2: "Baal-Vinshnu",
+                op3: "Narad",
+                op4: "Indra",
+            },
+            ans: "b",
+        },
+
+        {
+            question: "Which of the following is Akshaan known for acting in?",
+            options: {
+                op1: "Dangal",
+                op2: "Taare Zameen Par",
+                op3: "Sitaare Zameen Par",
+                op4: "Sunny Sanskari Ki Tulsi Kumari",
+            },
+            ans: "d",
+        },
+    
+
+    ]
+    const [index,setIndex] = useState(0);
+
+
     const [celebrate,setCelebrate] = useState(false);
     const [menuClick,setMenuClick] = useState(false);
     // const [year,setYear] = useState(2025);
@@ -30,7 +80,7 @@ function CounterContextProvider({children}){
     const [remainingTime,setRemainingTime] = useState(calculateRemainingTime());
 
     const value = {
-        celebrate,setCelebrate,targetDate,calculateRemainingTime,remainingTime,setRemainingTime,menuClick,setMenuClick,menuHandler
+        celebrate,setCelebrate,targetDate,calculateRemainingTime,remainingTime,setRemainingTime,menuClick,setMenuClick,menuHandler,index,setIndex,questions
     }
 
     return <CounterContext.Provider value={value}>

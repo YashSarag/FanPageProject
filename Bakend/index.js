@@ -6,12 +6,17 @@ app.use(express.json());
 const cors = require('cors');
 
 app.use(cors({
+<<<<<<< HEAD
   origin: "*", 
+=======
+  origin: "https://fan-page-frontend-alpha.vercel.app",
+>>>>>>> 43069ce (version_2)
   methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 
 
 
+<<<<<<< HEAD
 const path = require('path');
 // serve static files first
 app.use(express.static(path.join(__dirname, "../Frontend/public")));
@@ -20,6 +25,16 @@ app.use(express.static(path.join(__dirname, "../Frontend/public")));
 app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, "../Frontend/public", "index.html"));
 });
+=======
+// const path = require('path');
+// // serve static files first
+// app.use(express.static(path.join(__dirname, "../Frontend")));
+
+// // catch-all (must be last)
+// app.get(/.*/, (req, res) => {
+//   res.sendFile(path.join(__dirname, "../Frontend", "index.html"));
+// });
+>>>>>>> 43069ce (version_2)
 
 
 

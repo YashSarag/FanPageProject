@@ -32,7 +32,7 @@ function Home(){
 
               <ul className='flex gap-[20px] text-3xl mx-auto max-w-max mt-[10px]'>
                 <li className='hover:text-red-500 transition-all duration-200'>
-                  <a href='https://www.instagram.com/akshaansehrawat_official?igsh=MWpjcWY1cTBhYjFpbA==' target='_blank'>
+                  <a href='https://www.instagram.com/akshaan_sehrawat?utm_source=ig_web_button_share_sheet&igsh=MWpjcWY1cTBhYjFpbA==' target='_blank'>
                     <FaSquareInstagram/>
                   </a>
                 </li>

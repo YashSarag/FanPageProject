@@ -29,6 +29,19 @@ import img_27 from '../assets/gallery-27.jpg'
 import img_28 from '../assets/gallery-28.jpg'
 import img_29 from '../assets/gallery-29.jpg'
 import img_30 from '../assets/gallery-30.jpg'
+
+import img_31 from '../assets/gallery-31.jpg'
+import img_32 from '../assets/gallery-32.jpg'
+import img_33 from '../assets/gallery-33.jpg'
+import img_34 from '../assets/gallery-34.jpg'
+import img_35 from '../assets/gallery-35.jpg'
+import img_36 from '../assets/gallery-36.jpg'
+import img_37 from '../assets/gallery-37.jpg'
+import img_38 from '../assets/gallery-38.jpg'
+import img_39 from '../assets/gallery-39.jpg'
+import img_40 from '../assets/gallery-40.jpg'
+import img_41 from '../assets/gallery-41.jpg'
+
 import imgu_1 from '../assets/decoration/imgu-1.jpg'
 import imgu_2 from '../assets/decoration/imgu-2.jpg'
 import imgu_3 from '../assets/decoration/imgu-3.jpg'
@@ -38,7 +51,7 @@ import imgu_6 from '../assets/decoration/imgu-6.jpg'
 import imgu_7 from '../assets/decoration/imgu-7.jpg'
 
 function PhotoGallery(){
-  const [gallery,setGalley] = useState([img_1,imgu_3,img_25,img_24,img_16,img_5,,img_17,img_23,imgu_2,img_7,img_28,img_22,img_2,img_8,img_30,imgu_7,img_10,img_11,img_12,img_6,imgu_1,imgu_6,img_9,imgu_5])
+  const [gallery,setGalley] = useState([img_41,img_40,img_39,img_38,img_36,img_35,img_34,img_33,img_31,img_1,imgu_3,img_25,img_24,img_16,img_5,,img_17,img_23,imgu_2,img_7,img_28,img_22,img_2,img_11,img_12,img_6,imgu_1,imgu_6,img_9,imgu_5])
 
   const cols={
     default: 4,

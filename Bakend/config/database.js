@@ -1,8 +1,12 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-function dbConnect(){
-    mongoose.connect(process.env.DB_URL)
+async function dbConnect(){
+    await mongoose.connect(process.env.DATABASE_URL,{
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 20000, // wait up to 20s
+    })
     .then(()=>{
         console.log("Connected to database successfully");
     })

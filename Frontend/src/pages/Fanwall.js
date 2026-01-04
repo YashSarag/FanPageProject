@@ -28,7 +28,11 @@ function Fanwall(){
 
     async function postData({name,message,color,city,date}){
         try{
+<<<<<<< HEAD
             const response = await fetch("https://fanpageproject-11.onrender.com/api/v1/createFanwallCard", { 
+=======
+            const response = await fetch("https://fan-page-backend-tan.vercel.app/api/v1/createFanwallCard", { 
+>>>>>>> 43069ce (version_2)
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -64,7 +68,11 @@ function Fanwall(){
     async function fetchData(){
         setLoading(true);
         try{
+<<<<<<< HEAD
             const res = await fetch("https://fanpageproject-11.onrender.com/api/v1/getFanwallCards");
+=======
+            const res = await fetch("https://fan-page-backend-tan.vercel.app/api/v1/getFanwallCards");
+>>>>>>> 43069ce (version_2)
             const data = await res.json();
             if(data.success === true){
                 setCards(pre=>([card1,...data.data]));
@@ -153,6 +161,14 @@ function Fanwall(){
 
   return (
     <div className='w-full'>
+        {
+            loading && <div className='pointer-events-none flex justify-center items-center absolute top-0 w-screen h-screen z-[200]'>
+                <div className='absolute bottom-[200px] flex flex-col justify-center itmes-center'>
+                    <Loader/>
+                    {/* <p className='text-black font-bold mt-[15px]'>Loading</p> */}
+                </div>
+            </div>
+        }
         <a href='#form'>
             <button type='submit' className='fanwall-submit relative bg-white max-w-max mx-auto px-[20px] py-[6px] rounded-md block mb-[20px]'>
                 <p>Write your message for Akshaan</p>
@@ -167,7 +183,7 @@ function Fanwall(){
                 
                     loading?
 
-                    (<Loader/>):
+                    (<div></div>):
 
                     cards.map((card)=>(
                         <div style={{backgroundColor: card.color}}

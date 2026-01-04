@@ -11,7 +11,7 @@ const fanwallCardSchema = new mongoose.Schema(
         body:{
             type: String,
             required: true,
-            maxLength: 60,
+            maxLength: 500,
         },
 
         city:{
@@ -32,4 +32,4 @@ const fanwallCardSchema = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model("fanwallCard",fanwallCardSchema);
+module.exports = mongoose.model("fanwallcard",fanwallCardSchema);
